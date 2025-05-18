@@ -192,7 +192,7 @@ export default function UltraEnhancedQuiz() {
   const finishQuiz = () => {
     if (selectedOption === current.answer) setScore((s) => s );
     setShowResult(true);
-    const finalScore = selectedOption === current.answer ? score  : score;
+    const finalScore = selectedOption === current.answer ? score + 1  : score;
     if (finalScore > highScore) {
       setHighScore(finalScore);
       localStorage.setItem("quizHighScore", finalScore);
